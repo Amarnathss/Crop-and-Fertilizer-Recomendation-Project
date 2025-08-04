@@ -263,3 +263,40 @@ def disease_prediction():
 # ===============================================================================================
 if __name__ == '__main__':
     app.run(debug=False)
+
+
+# @app.route('/disease_prediction')
+# def disease_prediction():
+#     return render_template('disease_prediction.html')
+@app.route('/disease-detect', methods=['POST'])
+def disease_detect():
+    title = 'Harvestify - Disease Detection'
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            return redirect(url_for('disease_prediction'))
+        file = request.files['file']
+        if file.filename == '':
+            flash('No file selected')
+            return redirect(url_for('disease_prediction'))
+        if file and allowed_file(file.filename):
+            try:
+                img = file.read()
+                prediction = predict_image(img)
+                prediction = Markup(str(disease_dic[prediction]))
+                return render_template('disease-result.html', prediction=prediction, title=title)
+            except Exception as e:
+                flash(f'Error processing image: {str(e)}')
+                return redirect(url_for('disease_prediction'))
+        else:
+            flash('Invalid file type')
+            return redirect(url_for('disease_prediction'))
+    return redirect(url_for('disease_prediction'))
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in {'png', 'jpg', 'jpeg', 'gif'}
+
+@app.route('/disease-detect', methods=['POST'])
+def disease_detect():
+    if request.method == 'POST':
+        file = request.files['plant_image']  # Ensure you're receiving the file correctly
+        # File handling logic...
