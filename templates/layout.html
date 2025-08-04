@@ -155,10 +155,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1C00ff00;">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1F3F49;">
 		<div class="container">
 			<a class="navbar-brand" href="{{ url_for('home') }}">
-				<img src="{{ url_for('static', filename='images/logo.jpg') }}" style="width: 90px; height: 55px" alt="">
+				<img src="{{ url_for('static', filename='images/logo.jpg') }}" style="width: 90px; height: 55px" alt="Krisirava Logo">
 			</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
 				aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -172,13 +172,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop</a>
+						<a class="nav-link" href="{{ url_for('crop_recommend') }}">Crop Advisory</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
 					</li>
 				</ul>
 			</div>
@@ -191,23 +188,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	{% block body %} {% endblock %}
 
 	<!-- footer -->
-	<footer class="text-center py-5">
+	<!-- <footer class="text-center py-5">
 		<div class="container py-md-3">
-			<!-- logo -->
+			//logo
 			<h2 class="logo2 text-center">
 				<a href="{{ url_for('home') }}">
 					Harvestify
 				</a>
 			</h2>
-			<!-- //logo -->
-			<!-- address -->
+			//logo
+			//address
 			<div class="contact-left-footer mt-4">
 
 
 
 
 
-				<!-- <a href="community.html">Community</a> -->
+				<a href="community.html">Community</a>
 				</p>
 			</div>
 			<div class="w3l-copy text-center">
@@ -218,7 +215,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p>&copy; Copyright 2022 Atharva Ingle</p>
 			
 		</div>
-	</footer>
+	</footer> -->
 	<!-- //footer -->
 
 	<!-- move top icon -->

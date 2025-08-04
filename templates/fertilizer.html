@@ -99,6 +99,48 @@
         <option>coffee</option>
       </select>
     </div>
+    <div class="form-group">
+      <label for="sample" style="font-size: 17px"><b>Select a Sample</b></label>
+      <select
+        name="sample"
+        class="form-control"
+        id="sample"
+        style="font-weight: bold"
+        onclick="fillFertilizerSampleValues()"
+      >
+        <option selected>Select a sample</option>
+        <option value="95,40,50,rice">
+          Sample 1 (N:95, P:40, K:50, Crop: Rice)
+        </option>
+        <option value="80,35,45,maize">
+          Sample 2 (N:80, P:35, K:45, Crop: Maize)
+        </option>
+        <option value="70,30,40,chickpea">
+          Sample 3 (N:70, P:30, K:40, Crop: Chickpea)
+        </option>
+        <option value="60,25,35,kidneybeans">
+          Sample 4 (N:60, P:25, K:35, Crop: Kidney Beans)
+        </option>
+        <option value="55,20,30,pigeonpeas">
+          Sample 5 (N:55, P:20, K:30, Crop: Pigeon Peas)
+        </option>
+        <option value="50,18,28,mothbeans">
+          Sample 6 (N:50, P:18, K:28, Crop: Moth Beans)
+        </option>
+        <option value="65,30,40,mungbean">
+          Sample 7 (N:65, P:30, K:40, Crop: Mung Bean)
+        </option>
+        <option value="78,35,48,blackgram">
+          Sample 8 (N:78, P:35, K:48, Crop: Black Gram)
+        </option>
+        <option value="90,40,55,lentil">
+          Sample 9 (N:90, P:40, K:55, Crop: Lentil)
+        </option>
+        <option value="85,38,50,cotton">
+          Sample 10 (N:85, P:38, K:50, Crop: Cotton)
+        </option>
+      </select>
+    </div>
 
     <div class="d-flex justify-content-center">
       <button
@@ -118,4 +160,18 @@
     </div>
   </form>
 </div>
+<script>
+  function fillFertilizerSampleValues() {
+    const sampleSelect = document.getElementById('sample').value;
+    if (sampleSelect) {
+      const [N, P, K, crop] = sampleSelect.split(',');
+
+      // Populate input fields with selected sample values
+      document.getElementById('Nitrogen').value = N;
+      document.getElementById('Phosphorous').value = P;
+      document.getElementById('Pottasium').value = K;
+      document.getElementById('crop').value = crop;
+    }
+  }
+</script>
 {% endblock %}

@@ -91,6 +91,39 @@
       />
     </div>
     <div class="form-group">
+      <label for="Humidity" style="font-size: 17px">
+        <b>Humidity</b>
+      </label>
+      <input
+        type="number"
+        class="form-control"
+        id="Humidity"
+        name="humidity"
+        placeholder="Enter the value (example: 50)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    
+    <div class="form-group">
+      <label for="Temperature" style="font-size: 17px">
+        <b>Temperature</b>
+      </label>
+      <input
+        type="number"
+        class="form-control"
+        id="Temperature"
+        name="temperature"
+        placeholder="Enter the value (example: 25)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <!-- <select id="sampleDropdown" name="samples" style="font-weight: bold; color: black">
+      <option value="sample1">Sample1</option>
+      <option value="sample2" >Sample2</option>
+    </select> -->
+    <!-- <div class="form-group">
       <label for="State" style="font-size: 17px"><b>State</b></label>
       <select
         onchange="print_city('state', this.selectedIndex);"
@@ -112,6 +145,30 @@
       <script language="javascript">
         print_state("sts");
       </script>
+    </div> -->
+    <div class="form-group">
+      <label for="sampleSelect" style="font-size: 17px"><b>Choose Sample</b></label>
+      <select
+        id="sampleSelect"
+        class="form-control"
+        style="font-weight: bold; color: black;"
+        onchange="fillSampleValues()"
+      >
+        <option value="">Select a sample</option>
+        <option value="95,40,50,6.5,100,60,25">Sample 1 (N:95, P:40, K:50, pH:6.5, Rainfall:100mm, Humidity:60%, Temp:25°C)</option>
+<option value="80,35,45,5.8,120,65,28">Sample 2 (N:80, P:35, K:45, pH:5.8, Rainfall:120mm, Humidity:65%, Temp:28°C)</option>
+<option value="70,30,40,7.0,90,55,22">Sample 3 (N:70, P:30, K:40, pH:7.0, Rainfall:90mm, Humidity:55%, Temp:22°C)</option>
+<option value="60,25,35,6.9,85,50,23">Sample 4 (N:60, P:25, K:35, pH:6.9, Rainfall:85mm, Humidity:50%, Temp:23°C)</option>
+<option value="55,20,30,6.4,75,45,24">Sample 5 (N:55, P:20, K:30, pH:6.4, Rainfall:75mm, Humidity:45%, Temp:24°C)</option>
+<option value="50,18,28,5.9,65,40,20">Sample 6 (N:50, P:18, K:28, pH:5.9, Rainfall:65mm, Humidity:40%, Temp:20°C)</option>
+<option value="65,30,40,6.7,95,55,26">Sample 7 (N:65, P:30, K:40, pH:6.7, Rainfall:95mm, Humidity:55%, Temp:26°C)</option>
+<option value="78,35,48,7.2,110,60,27">Sample 8 (N:78, P:35, K:48, pH:7.2, Rainfall:110mm, Humidity:60%, Temp:27°C)</option>
+<option value="90,40,55,7.5,130,65,30">Sample 9 (N:90, P:40, K:55, pH:7.5, Rainfall:130mm, Humidity:65%, Temp:30°C)</option>
+<option value="85,38,50,6.8,100,58,25">Sample 10 (N:85, P:38, K:50, pH:6.8, Rainfall:100mm, Humidity:58%, Temp:25°C)</option>
+<option value="72,28,42,6.2,80,52,22">Sample 11 (N:72, P:28, K:42, pH:6.2, Rainfall:80mm, Humidity:52%, Temp:22°C)</option>
+<option value="88,42,58,7.0,120,63,29">Sample 12 (N:88, P:42, K:58, pH:7.0, Rainfall:120mm, Humidity:63%, Temp:29°C)</option>
+
+      </select>
     </div>
 
     <div class="d-flex justify-content-center">
@@ -133,6 +190,24 @@
   </form>
 </div>
 
+
+<script>
+  function fillSampleValues() {
+    const sampleSelect = document.getElementById('sampleSelect').value;
+    if (sampleSelect) {
+      const [N, P, K, ph, rainfall, humidity, temperature] = sampleSelect.split(',');
+
+      // Populate input fields with selected sample values
+      document.getElementById('Nitrogen').value = N;
+      document.getElementById('Phosphorous').value = P;
+      document.getElementById('Pottasium').value = K;
+      document.getElementById('ph').value = ph;
+      document.getElementById('Rainfall').value = rainfall;
+      document.getElementById('Humidity').value = humidity;
+      document.getElementById('Temperature').value = temperature;
+    }
+  }
+</script>
 <!-- Form section -->
 
 {% endblock %}
