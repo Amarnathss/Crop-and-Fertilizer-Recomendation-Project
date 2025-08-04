@@ -33,8 +33,8 @@ Krisirava is a comprehensive agricultural technology platform that empowers farm
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_GITHUB_USERNAME/Krisirava.git
-   cd Krisirava
+   git clone https://github.com/Amarnathss/Crop-and-Fertilizer-Recomendation-Project.git
+   cd Crop-and-Fertilizer-Recomendation-Project
    ```
 
 2. **Create a virtual environment**
@@ -149,11 +149,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Project Maintainer**: AMAR
-- GitHub: [@YOUR_GITHUB_USERNAME](https://github.com/YOUR_GITHUB_USERNAME)
+- GitHub: [@Amarnathss](https://github.com/Amarnathss)
 
 ## 🐛 Agricultural Support & Feature Requests
 
-Please use the [GitHub Issues](https://github.com/YOUR_GITHUB_USERNAME/Krisirava/issues) page to report agricultural platform issues or request new farming features.
+Please use the [GitHub Issues](https://github.com/Amarnathss/Crop-and-Fertilizer-Recomendation-Project/issues) page to report agricultural platform issues or request new farming features.
 
 ---
 
