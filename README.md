@@ -1,6 +1,6 @@
 # 🌾 Krisirava - Intelligent Agricultural Assistant
 
-Krisirava is a comprehensive agricultural technology platform that empowers farmers with AI-driven insights for sustainable farming practices. Our intelligent system helps agricultural communities optimize crop yields, manage soil health, and protect crops from diseases through cutting-edge machine learning and data analytics.
+Krisirava is a comprehensive agricultural technology platform that empowers farmers with AI-driven insights for sustainable farming practices. Our intelligent system helps agricultural communities optimize crop yields and manage soil health through cutting-edge machine learning and data analytics.
 
 ## 🚀 Agricultural Solutions
 
@@ -16,21 +16,12 @@ Krisirava is a comprehensive agricultural technology platform that empowers farm
 - Provides customized fertilizer schedules to maximize crop productivity and soil health
 - Supports sustainable farming practices through efficient nutrient management
 
-### 3. **Plant Health Monitoring & Disease Diagnosis**
-- AI-powered crop disease identification through image analysis
-- Comprehensive database covering 38+ plant diseases across major agricultural crops
-- Advanced deep learning technology (ResNet9) for accurate field diagnosis
-- Early detection system for diseases in staple crops: wheat, rice, corn, tomatoes, potatoes, and fruit trees
-
 ## 🛠️ Agricultural Technology Stack
 
 - **Backend**: Flask (Python) - Lightweight framework for agricultural data processing
-- **Machine Learning & AI**: 
-  - Scikit-learn (Random Forest for crop advisory systems)
-  - PyTorch (ResNet9 for plant pathology detection)
+- **Machine Learning**: Scikit-learn (Random Forest for crop advisory systems)
 - **Frontend**: HTML5, CSS3, Bootstrap, JavaScript - Farmer-friendly interface design
 - **Agricultural Data Processing**: NumPy, Pandas - For soil and climate data analysis
-- **Image Processing**: PIL (Pillow) - For crop disease image analysis
 - **Deployment**: Gunicorn, Cloud-ready for agricultural extension services
 
 ## 📋 Prerequisites
@@ -42,7 +33,7 @@ Krisirava is a comprehensive agricultural technology platform that empowers farm
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Gladiator07/Krisirava.git
+   git clone https://github.com/YOUR_GITHUB_USERNAME/Krisirava.git
    cd Krisirava
    ```
 
@@ -78,11 +69,8 @@ Krisirava/
 ├── requirements.txt      # Python dependencies for agricultural modules
 ├── Procfile             # Cloud deployment configuration
 ├── models/              # Trained agricultural AI models
-│   ├── RandomForest.pkl # Crop advisory prediction model
-│   └── plant_disease_model.pth # Plant pathology detection model
+│   └── RandomForest.pkl # Crop advisory prediction model
 ├── utils/               # Agricultural utility functions
-│   ├── model.py        # ResNet9 architecture for crop disease detection
-│   ├── disease.py      # Plant disease database and treatment recommendations
 │   └── fertilizer.py   # Soil fertility and fertilizer recommendations
 ├── Data/                # Agricultural datasets
 │   └── fertilizer.csv  # Crop-specific fertilizer requirements data
@@ -105,23 +93,12 @@ Krisirava/
 3. Input existing soil nutrient levels (NPK analysis)
 4. Get precise fertilizer recommendations with application timings
 
-### Plant Disease Diagnosis
-1. Open "Crop Health Monitor" feature
-2. Capture or upload high-quality images of affected plant parts
-3. Receive instant disease identification with organic and chemical treatment options
-
 ## 🤖 Agricultural AI Models
 
 ### Crop Advisory Intelligence
 - **Algorithm**: Random Forest Classifier optimized for agricultural data
 - **Input Parameters**: Soil nutrients (N, P, K), Climate data (Temperature, Humidity, pH, Rainfall)
 - **Output**: Scientifically-backed crop recommendations for maximum yield potential
-
-### Plant Pathology Detection System
-- **Architecture**: ResNet9 (Custom Convolutional Neural Network)
-- **Input**: High-resolution plant leaf/stem images (256x256 pixels)
-- **Classification**: 38 major crop disease categories
-- **Framework**: PyTorch with agricultural image preprocessing
 
 ## 🌐 Agricultural Extension Deployment
 
@@ -141,21 +118,13 @@ Krisirava is designed for deployment in agricultural extension services and farm
    heroku config:set WEATHER_API_KEY=your_weather_api_key
    ```
 
-## 📊 Agricultural Crops & Disease Coverage
+## 📊 Agricultural Crops Coverage
 
 ### Supported Crops for Precision Agriculture
 **Staple Grains**: Rice, Maize (Corn), Wheat  
 **Cash Crops**: Cotton, Jute, Coffee  
 **Horticulture**: Coconut, Papaya, Orange, Apple, Mango, Banana, Pomegranate, Grapes, Muskmelon, Watermelon  
-**Legumes & Pulses**: Lentil, Blackgram, Mungbean, Mothbeans, Pigeonpeas, Kidneybeans, Chickpea  
-
-### Plant Disease Detection Database
-- **Apple Orchards**: Apple scab, Black rot, Cedar apple rust, Healthy identification
-- **Corn/Maize Fields**: Cercospora leaf spot, Common rust, Northern Leaf Blight, Gray leaf spot
-- **Grape Vineyards**: Black rot, Esca (Black Measles), Leaf blight (Isariopsis Leaf Spot)
-- **Tomato Crops**: Bacterial spot, Early blight, Late blight, Leaf Mold, Septoria leaf spot, Target Spot, Yellow Leaf Curl Virus, Mosaic virus
-- **Potato Farming**: Early blight, Late blight detection
-- **Additional Crops**: Berry fruits, Citrus, Peppers, and various vegetable crops
+**Legumes & Pulses**: Lentil, Blackgram, Mungbean, Mothbeans, Pigeonpeas, Kidneybeans, Chickpea
 
 ## 🤝 Contributing to Agricultural Innovation
 
@@ -172,20 +141,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - OpenWeatherMap API for real-time agricultural weather data
-- PyTorch community for advancing AI in agriculture
 - Scikit-learn for machine learning in precision farming
 - Flask community for enabling agricultural web applications
-- Agricultural research institutions worldwide for crop and disease data
+- Agricultural research institutions worldwide for crop and fertilizer data
 - Farming communities for providing valuable field insights and feedback
 
 ## 📞 Contact
 
-**Project Maintainer**: Gladiator07
-- GitHub: [@Gladiator07](https://github.com/Gladiator07)
+**Project Maintainer**: AMAR
+- GitHub: [@YOUR_GITHUB_USERNAME](https://github.com/YOUR_GITHUB_USERNAME)
 
 ## 🐛 Agricultural Support & Feature Requests
 
-Please use the [GitHub Issues](https://github.com/Gladiator07/Krisirava/issues) page to report agricultural platform issues or request new farming features.
+Please use the [GitHub Issues](https://github.com/YOUR_GITHUB_USERNAME/Krisirava/issues) page to report agricultural platform issues or request new farming features.
 
 ---
 
