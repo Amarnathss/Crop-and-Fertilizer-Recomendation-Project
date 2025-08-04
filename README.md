@@ -1,4 +1,4 @@
-# 🌾 Krisirava - Intelligent Agricultural Assistant
+###### 🌾 Krisirava - Intelligent Agricultural Assistant
 
 Krisirava is a comprehensive agricultural technology platform that empowers farmers with AI-driven insights for sustainable farming practices. Our intelligent system helps agricultural communities optimize crop yields and manage soil health through cutting-edge machine learning and data analytics.
 
