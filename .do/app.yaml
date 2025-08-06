@@ -1,0 +1,21 @@
+name: krisirava-agricultural-platform
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: Amarnathss/Crop-and-Fertilizer-Recomendation-Project
+    branch: main
+  run_command: gunicorn --worker-connections 1000 --timeout 120 app:app
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  routes:
+  - path: /
+  health_check:
+    http_path: /
+  envs:
+  - key: FLASK_ENV
+    value: production
+  - key: WEATHER_API_KEY
+    value: YOUR_WEATHER_API_KEY_HERE
+    type: SECRET

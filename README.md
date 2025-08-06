@@ -104,19 +104,53 @@ Krisirava/
 
 Krisirava is designed for deployment in agricultural extension services and farming communities:
 
-1. **Cloud Deployment for Agricultural Organizations**
+### 🚀 DigitalOcean App Platform Deployment
+
+Deploy your Krisirava platform to DigitalOcean App Platform:
+
+1. **Prepare your repository**
    ```bash
    git add .
-   git commit -m "Deploy Krisirava agricultural platform"
-   heroku create krisirava-agriculture
-   git push heroku main
+   git commit -m "Prepare for DigitalOcean deployment"
+   git push origin main
    ```
 
-2. **Environment Configuration**
-   Set up weather integration for climate-smart agriculture:
-   ```bash
-   heroku config:set WEATHER_API_KEY=your_weather_api_key
+2. **Create DigitalOcean App**
+   - Go to [DigitalOcean App Platform](https://cloud.digitalocean.com/apps)
+   - Click "Create App"
+   - Choose "GitHub" as source
+   - Select your repository: `Amarnathss/Crop-and-Fertilizer-Recomendation-Project`
+   - Select branch: `main`
+
+3. **Configure App Settings**
+   - **App Name**: `krisirava-agriculture`
+   - **Plan**: Basic ($5/month recommended for small farms)
+   - **Instance Type**: Basic XXS (512 MB RAM, 1 vCPU)
+
+4. **Environment Variables**
+   Add these environment variables in the DigitalOcean dashboard:
    ```
+   FLASK_ENV=production
+   WEATHER_API_KEY=your_openweather_api_key_here
+   ```
+
+5. **Deploy**
+   - Review your settings
+   - Click "Create Resources"
+   - Wait for deployment (usually 5-10 minutes)
+
+### 🏗️ Alternative: Heroku Deployment
+
+For Heroku deployment:
+
+```bash
+# Install Heroku CLI first
+git add .
+git commit -m "Deploy Krisirava agricultural platform"
+heroku create krisirava-agriculture
+heroku config:set WEATHER_API_KEY=your_weather_api_key
+git push heroku main
+```
 
 ## 📊 Agricultural Crops Coverage
 
