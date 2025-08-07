@@ -1,11 +1,11 @@
 # Importing essential libraries and modules
 
-from flask import Flask, render_template, request, redirect
-from markupsafe import Markup
-import numpy as np
-import pandas as pd
+from flask import Flask, render_template, request, redirect # type: ignore
+from markupsafe import Markup # type: ignore
+import numpy as np # type: ignore
+import pandas as pd # type: ignore
 from utils.fertilizer import fertilizer_dic
-import requests
+import requests # type: ignore
 import config
 import pickle
 # ==============================================================================================
